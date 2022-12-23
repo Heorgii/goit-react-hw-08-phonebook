@@ -1,16 +1,20 @@
-export const App = () => {
+// import LogInForm from "./LogInForm/LogInForm";
+import { lazy } from "react";
+// import { Route, Routes } from "react-router-dom";
+
+// const AppBar = lazy(() => import('./AppBar/AppBar'));
+// const Navigation = lazy(() => import('./Navigation/Navigation'));
+const LogInForm = lazy(() => import('./LogInForm/LogInForm'));
+const RegistrationForm = lazy(() => import('./RegistrationForm/RegistrationForm'));
+
+const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <LogInForm />
+      <RegistrationForm />
     </div>
   );
 };
+
+
+export default App;
