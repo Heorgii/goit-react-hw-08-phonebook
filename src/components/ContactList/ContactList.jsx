@@ -1,9 +1,9 @@
 import css from './ContactList.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import Notification from 'components/Notification/Notification';
-import { deleteContact } from 'redux/operations';
-import { getContacts, getIsLoading } from 'redux/selector';
-import { getFilter } from 'redux/selector';
+import { deleteContact } from 'redux/contacts/operations';
+import { getContacts, getIsLoading } from 'redux/contacts/selector';
+import { getFilter } from 'redux/contacts/selector';
 
 const ContactList = () => {
     const filterInput = useSelector(getFilter);
