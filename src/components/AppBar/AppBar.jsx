@@ -1,13 +1,15 @@
-import { Suspense } from "react";
-import { Outlet } from "react-router-dom";
+import Navigation from "components/Navigation/Navigation";
+import { useAuth } from "hooks/useAuth";
+
 
 const AppBar = () => {
+    const {isLoggedIn} = useAuth();
+    
     return (
-        <>
-            <Suspense fallback={<div>Loading...</div>}>
-                <Outlet />
-            </Suspense>
-        </>
+        <header>
+            <Navigation />
+            {/* {isLoggedIn ? <UserMenu /> : <AuthNav />} */}
+        </header>
     );
 }
 
