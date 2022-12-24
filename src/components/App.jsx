@@ -1,17 +1,19 @@
-// import LogInForm from "./LogInForm/LogInForm";
 import { lazy } from "react";
-// import { Route, Routes } from "react-router-dom";
-
-// const AppBar = lazy(() => import('./AppBar/AppBar'));
-// const Navigation = lazy(() => import('./Navigation/Navigation'));
-const LogInForm = lazy(() => import('./LogInForm/LogInForm'));
-const RegistrationForm = lazy(() => import('./RegistrationForm/RegistrationForm'));
+import ContactForm from "./ContactForm/ContactForm";
+import ContactList from "./ContactList/ContactList";
+import Filter from "./Filter/Filter";
+import css from './App.module.css';
+const Home = lazy(() => import('../pages/Home/Home'));
 
 const App = () => {
   return (
     <div>
-      <LogInForm />
-      <RegistrationForm />
+      <h1 className={css.title}>Phonebook</h1>
+      <ContactForm />
+      <h2 className={css.contact_title}>Contacts</h2>
+      <Filter />
+      <ContactList />
+      <Home />
     </div>
   );
 };
