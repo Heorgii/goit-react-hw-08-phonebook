@@ -41,7 +41,7 @@ const authSlice = createSlice({
             state.isLoggedIn = false;
         },
 
-        [refreshUser.pending](state) {
+        [refreshUser.rejected](state) {
             state.isRefreshing = false;
         },
     }

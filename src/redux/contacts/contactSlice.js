@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import persistReducer from 'redux-persist/es/persistReducer';
 import storage from 'redux-persist/lib/storage';
+import { logOut } from 'redux/auth/operations';
 import { fetchContacts, addContacts, deleteContact } from './operations';
 
 const handlePending = state => {
@@ -47,6 +48,13 @@ export const contactSlice = createSlice({
             state.items.splice(idx, 1);
         },
         [deleteContact.rejected]: handleRejected,
+
+        // logout 
+        [logOut.fulfilled](state) {
+            state.items = [];
+            state.error = null;
+            state.isLoading = false;
+        },
     }
 });
 
