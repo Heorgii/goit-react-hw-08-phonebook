@@ -6,5 +6,5 @@ export const useAuth = () => {
     const user = useSelector(selectUser);
     const isRefreshing = useSelector(selectIsRefreshing);
 
-    return (isLoggedIn, user, isRefreshing);
+    return {isLoggedIn, user, isRefreshing};
 }
