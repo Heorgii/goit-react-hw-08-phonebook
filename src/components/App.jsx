@@ -1,10 +1,10 @@
-// import { lazy } from "react";
+import { lazy } from "react";
 // import { useDispatch } from "react-redux";
 // import { useAuth } from "hooks/useAuth";
 // import { useEffect } from "react";
 // import { refreshUser } from "redux/auth/operations";
 // import { Route, Routes } from "react-router-dom";
-// import SharedLayout from "./SharedLayout.jsx";
+import SharedLayout from "./SharedLayout.jsx";
 // import { RestrictedRoute } from "utils/RestrictedRoute.jsx";
 // import { PrivateRoute } from "utils/PrivateRoute.jsx";
 
@@ -14,7 +14,7 @@ import Filter from "./Filter/Filter";
 import css from './App.module.css';
 
 
-// const HomePage = lazy(() => import('../pages/Home/Home'));
+const HomePage = lazy(() => import('../pages/Home/Home'));
 // const RegisterPage = lazy(() => import('../pages/Register/Register'));
 // const LoginPage = lazy(() => import('../pages/LogIn/LogIn'));
 // const ContactsPage = lazy(() => import('../pages/Contacts/Contacts'));
@@ -31,6 +31,8 @@ const App = () => {
 
   return (
     <div>
+      <SharedLayout />
+      <HomePage />
       <h1 className={css.title}>Phonebook</h1>
       <ContactForm />
       <h2 className={css.contact_title}>Contacts</h2>
