@@ -7,11 +7,12 @@
 // import SharedLayout from "./SharedLayout.jsx";
 // import { RestrictedRoute } from "utils/RestrictedRoute.jsx";
 // import { PrivateRoute } from "utils/PrivateRoute.jsx";
-// import css from './App.module.css';
 
 import ContactForm from "./ContactForm/ContactForm";
 import ContactList from "./ContactList/ContactList";
 import Filter from "./Filter/Filter";
+import css from './App.module.css';
+
 
 // const HomePage = lazy(() => import('../pages/Home/Home'));
 // const RegisterPage = lazy(() => import('../pages/Register/Register'));
@@ -30,9 +31,9 @@ const App = () => {
 
   return (
     <div>
-      <h1 >Phonebook</h1>
+      <h1 className={css.title}>Phonebook</h1>
       <ContactForm />
-      <h2 >Contacts</h2>
+      <h2 className={css.contact_title}>Contacts</h2>
       <Filter />
       <ContactList />
     </div>
