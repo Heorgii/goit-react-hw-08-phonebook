@@ -6,17 +6,15 @@ const Navigation = () => {
     const { isLoggedIn } = useAuth();
 
     return (
-        <nav className={css.navBoox}>
-            <NavLink to="/" className={css.link} >
+        <nav>
+            <NavLink className={css.link} to="/">
                 Home
             </NavLink>
-
             {isLoggedIn && (
-                <NavLink to="/contacts" className={css.link} >
+                <NavLink className={css.link} to="/contacts">
                     Contacts
                 </NavLink>
             )}
-
         </nav>
     );
 }
