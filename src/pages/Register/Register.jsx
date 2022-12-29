@@ -2,7 +2,7 @@ import RegistrationForm from "components/RegistrationForm/RegistrationForm";
 import { Helmet } from "react-helmet";
 
 
-export default function LogIn() {
+export default function Register() {
     return (
         <div>
             <Helmet>

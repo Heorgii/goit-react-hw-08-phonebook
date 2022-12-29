@@ -8,16 +8,10 @@ import SharedLayout from "./SharedLayout.jsx";
 // import { RestrictedRoute } from "utils/RestrictedRoute.jsx";
 // import { PrivateRoute } from "utils/PrivateRoute.jsx";
 
-import ContactForm from "./ContactForm/ContactForm";
-import ContactList from "./ContactList/ContactList";
-import Filter from "./Filter/Filter";
-import css from './App.module.css';
-
-
 const HomePage = lazy(() => import('../pages/Home/Home'));
-// const RegisterPage = lazy(() => import('../pages/Register/Register'));
-// const LoginPage = lazy(() => import('../pages/LogIn/LogIn'));
-// const ContactsPage = lazy(() => import('../pages/Contacts/Contacts'));
+const RegisterPage = lazy(() => import('../pages/Register/Register'));
+const LoginPage = lazy(() => import('../pages/LogIn/LogIn'));
+const ContactsPage = lazy(() => import('../pages/Contacts/Contacts'));
 
 
 const App = () => {
@@ -33,11 +27,15 @@ const App = () => {
     <div>
       <SharedLayout />
       <HomePage />
-      <h1 className={css.title}>Phonebook</h1>
+      <LoginPage />
+      <RegisterPage />
+      <ContactsPage />
+
+      {/* <h1 className={css.title}>Phonebook</h1>
       <ContactForm />
       <h2 className={css.contact_title}>Contacts</h2>
       <Filter />
-      <ContactList />
+      <ContactList /> */}
     </div>
   );
 
