@@ -5,7 +5,7 @@ import { useAuth } from "hooks/useAuth";
 
 
 const AppBar = () => {
-    const {isLoggedIn} = useAuth();
+    // const {isLoggedIn} = useAuth();
     
     return (
         <header>
