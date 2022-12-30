@@ -25,12 +25,6 @@ const App = () => {
 
   return (
     <div>
-      {/* <SharedLayout />
-      <HomePage />
-      <LoginPage />
-      <RegisterPage />
-      <ContactsPage /> */}
-
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />

@@ -9,8 +9,6 @@ const AppBar = () => {
 
     return (
         <header>
-            {/* <UserMenu /> */}
-            {/* < NavAuth/> */}
             <Navigation />
             {isLoggedIn ? <UserMenu /> : <NavAuth />}
         </header>

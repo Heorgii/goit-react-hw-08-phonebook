@@ -22,32 +22,62 @@ export const contactSlice = createSlice({
     },
     extraReducers: {
         //fetch
+        // [fetchContacts.pending]: handlePending,
+        // [fetchContacts.fulfilled](state, action) {
+        //     state.isLoading = false;
+        //     state.error = null;
+        //     state.items = action.payload;
+        // },
+        // [fetchContacts.rejected]: handleRejected,
+
+        // //add
+        // [addContacts.pending]: handlePending,
+        // [addContacts.fulfilled](state, action) {
+        //     state.isLoading = false;
+        //     state.error = null;
+        //     state.items.push(action.payload);
+        // },
+        // [addContacts.rejected]: handleRejected,
+
+        // //delete
+        // [deleteContact.pending]: handlePending,
+        // [deleteContact.fulfilled](state, action) {
+        //     state.isLoading = false;
+        //     state.error = null;
+        //     const idx = state.items.findIndex(({ id }) => id === action.payload.id);
+        //     state.items.splice(idx, 1);
+        // },
+        // [deleteContact.rejected]: handleRejected,
+
+        //fetch
         [fetchContacts.pending]: handlePending,
+        [addContacts.pending]: handlePending,
+        [deleteContact.pending]: handlePending,
+        [fetchContacts.rejected]: handleRejected,
+        [addContacts.rejected]: handleRejected,
+        [addContacts.rejected]: handleRejected,
         [fetchContacts.fulfilled](state, action) {
             state.isLoading = false;
             state.error = null;
             state.items = action.payload;
         },
-        [fetchContacts.rejected]: handleRejected,
 
         //add
-        [addContacts.pending]: handlePending,
         [addContacts.fulfilled](state, action) {
             state.isLoading = false;
             state.error = null;
             state.items.push(action.payload);
         },
-        [addContacts.rejected]: handleRejected,
 
         //delete
-        [deleteContact.pending]: handlePending,
         [deleteContact.fulfilled](state, action) {
             state.isLoading = false;
             state.error = null;
-            const idx = state.items.findIndex(({ id }) => id === action.payload.id);
-            state.items.splice(idx, 1);
+            const index = state.items.findIndex(
+                task => task.id === action.payload.id
+            );
+            state.items.splice(index, 1);
         },
-        [deleteContact.rejected]: handleRejected,
 
         // logout 
         [logOut.fulfilled](state) {
