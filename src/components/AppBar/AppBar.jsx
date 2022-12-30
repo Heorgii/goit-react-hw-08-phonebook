@@ -1,18 +1,18 @@
-// import Navigation from "components/Navigation/Navigation";
+import Navigation from "components/Navigation/Navigation";
 import NavAuth from "components/NavAuth/NavAuth";
 import UserMenu from "components/UserMenu/UserMenu";
-// import { useAuth } from "hooks/useAuth";
+import { useAuth } from "hooks/useAuth";
 
 
 const AppBar = () => {
-    // const {isLoggedIn} = useAuth();
+    const {isLoggedIn} = useAuth();
 
     return (
         <header>
-            <UserMenu />
-            <NavAuth />
-            {/* <Navigation /> */}
-            {/* {isLoggedIn ? <UserMenu /> : <AuthNav />} */}
+            {/* <UserMenu /> */}
+            {/* < NavAuth/> */}
+            <Navigation />
+            {isLoggedIn ? <UserMenu /> : <NavAuth />}
         </header>
     );
 }

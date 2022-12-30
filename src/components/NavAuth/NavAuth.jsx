@@ -1,15 +1,25 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavAuth = () => {
-    <div>
-        <Link>
-            Register
-        </Link >
+    return (
+        <div>
+            {/* //     <Link>
+        //         Register
+        //     </Link>
 
-        <Link>
-            Log In
-        </Link >
-    </div>
+        //     <Link>
+        //         Log In
+        //     </Link > */}
+            <NavLink  to="/register">
+                Register
+            </NavLink>
+            <NavLink to="/login">
+                Log In
+            </NavLink>
+        </div>
+
+
+    );
 }
 
 export default NavAuth;
