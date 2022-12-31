@@ -1,6 +1,6 @@
 import { lazy } from "react";
 import { useDispatch } from "react-redux";
-import { useAuth } from "hooks/useAuth";
+// import { useAuth } from "hooks/useAuth";
 import { useEffect } from "react";
 import { refreshUser } from "redux/auth/operations";
 import { Route, Routes } from "react-router-dom";
