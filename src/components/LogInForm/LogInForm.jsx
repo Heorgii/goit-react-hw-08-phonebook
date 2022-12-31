@@ -10,12 +10,15 @@ const LogInForm = () => {
         e.preventDefault();
 
         const form = e.currentTarget;
+        const email = form.elements.email;
+        const password = form.elements.password;
 
-        dispatch(logIn({
-            email: form.elements.email.value,
-            password: form.elements.password.value,
-        }));
+        const user = {
+            email: email.value,
+            password: password.value,
+        }
 
+       dispatch(logIn(user));
         form.reset();
     }
 
@@ -31,8 +34,9 @@ const LogInForm = () => {
                 <label className={css.labele}>
                     <input className={css.input} type="password" name="password" placeholder="Password" />
                 </label>
-                <button type="submit" className={css.button} >Log in</button>
             </form>
+            <button type="submit" className={css.button} >Log in</button>
+
         </div>
     );
 }

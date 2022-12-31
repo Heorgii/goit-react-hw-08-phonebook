@@ -1,0 +1,21 @@
+.box {
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: antiquewhite;
+    padding-bottom: 289px;
+}
+
+.title {
+    font-size: 35px;
+    color: rgb(62, 218, 245);
+}
+
+.discr {
+    color: rgb(50, 180, 202);
+}
+
+.link{
+    color: rgb(13, 165, 192);
+}

@@ -1,13 +1,20 @@
-// import { lazy } from "react";
-// const LogInForm = lazy(() => import('components/LogInForm/LogInForm'));
-// const RegistrationForm = lazy(() => import('components/RegistrationForm/RegistrationForm'));
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
+import css from './Home.module.css';
 
 const Home = () => {
     return (
-        <div>
-            <h1>Welcome to Phonebook</h1>
-            <p>If you are register just log in,
-                but if you don't have account yet registraion.</p>
+        <div className={css.box}>
+            <Helmet>
+                <title>Phonebook</title>
+            </Helmet>
+            <h1 className={css.title}>Welcome to Phonebook</h1>
+            <p className={css.discr}>If you are register just <Link className={css.link} to="/login">
+                log In
+            </Link>,
+                but if you don't have account yet <Link className={css.link} to="/register">
+                    registraion.
+                </Link></p>
         </div>
     );
 }
