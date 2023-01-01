@@ -1,8 +1,7 @@
-import { lazy } from "react";
-import { useDispatch } from "react-redux";
-// import { useAuth } from "hooks/useAuth";
-import { useEffect } from "react";
-import { refreshUser } from "redux/auth/operations";
+import { lazy } from "react"; //,useEffect
+// import { useDispatch } from "react-redux";
+import { useAuth } from "hooks/useAuth";
+// import { refreshUser } from "redux/auth/operations";
 import { Route, Routes } from "react-router-dom";
 import SharedLayout from "./SharedLayout.jsx";
 import { RestrictedRoute } from "utils/RestrictedRoute.jsx";
@@ -16,15 +15,17 @@ const ContactsPage = lazy(() => import('../pages/Contacts/Contacts'));
 
 
 const App = () => {
-  const dispatch = useDispatch();
-  // const isRefreshing = useAuth();
-  // console.log(isRefreshing);
+  // const dispatch = useDispatch();
+  const { isRefreshing } = useAuth();
+  console.log(isRefreshing);
 
-  useEffect(() => {
-    dispatch(refreshUser())
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(refreshUser());
+  // }, [dispatch]);
 
-  return (
+  return isRefreshing ? (
+    <b>Refreshing user...</b>
+  ) : (
     <div>
       <HelmetProvider>
         <Routes>
