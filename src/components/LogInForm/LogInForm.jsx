@@ -17,7 +17,6 @@ const LogInForm = () => {
             email: email.value,
             password: password.value,
         }
-        console.log(user);
         
         dispatch(logIn(user));
         form.reset();

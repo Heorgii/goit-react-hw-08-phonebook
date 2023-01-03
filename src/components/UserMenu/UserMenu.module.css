@@ -7,6 +7,13 @@
     color: rgb(62, 218, 245);
     font-size: 20px;
     margin-right: 10px;
+    text-decoration: none;
+    transition: 250ms ease;
+}
+
+.user_name:hover {
+    color: rgb(0, 151, 177);
+    transition: all .3s cubic-bezier(.39, .575, .565, 1);
 }
 
 .button {
@@ -22,7 +29,7 @@
     height: 31px;
 }
 
-.button:hover{
+.button:hover {
     background-color: rgb(0, 151, 177);
     transition: all .3s cubic-bezier(.39, .575, .565, 1);
 }
