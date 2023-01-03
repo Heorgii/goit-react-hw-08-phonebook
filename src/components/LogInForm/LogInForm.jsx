@@ -9,7 +9,7 @@ const LogInForm = () => {
     const handleSubmit = e => {
         e.preventDefault();
 
-        const form = e.currentTarget;
+        const form = e.target;
         const email = form.elements.email;
         const password = form.elements.password;
 
@@ -17,8 +17,8 @@ const LogInForm = () => {
             email: email.value,
             password: password.value,
         }
-
-       dispatch(logIn(user));
+        console.log(user);
+        dispatch(logIn(user));
         form.reset();
     }
 

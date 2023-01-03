@@ -20,8 +20,7 @@ const RegistrationForm = () => {
             email: email.value,
             password: password.value,
         }
-
-       dispatch(register(newUser));
+        dispatch(register(newUser));
         form.reset();
     }
 
@@ -51,7 +50,7 @@ const RegistrationForm = () => {
                 </label>
             </form>
 
-            <button type="submit"  className={css.button}>Sing up</button>
+            <button type="submit" className={css.button}>Sing up</button>
 
         </div>
     );
