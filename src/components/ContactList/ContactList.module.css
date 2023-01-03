@@ -37,9 +37,11 @@
     background-color: #0060af;
     color: #fff;
     cursor: pointer;
+    transition: 250ms ease;
 }
 
 .btn_delete_contact:hover {
     background-color: #0890ff;
+    transition: all .3s cubic-bezier(.39, .575, .565, 1);
 }
 

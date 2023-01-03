@@ -30,28 +30,22 @@ const RegistrationForm = () => {
             <form className={css.form} onSubmit={handleSubmit}>
                 <label className={css.labele}>
                     <input className={css.input} type="text" name="name" placeholder="Name"
-                        pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-                        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+                        title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                         required />
                 </label>
 
                 <label className={css.labele}>
                     <input className={css.input} type="email" name="email" placeholder="Email"
-                        pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-                        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+                        title="Email must consist of your personal info,@ symbol and domain. Example, personal_info@domain"
                         required />
                 </label>
 
                 <label className={css.labele}>
-                    <input className={css.input} type="password" name="password" placeholder="Password"
-                        pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-                        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-                        required />
+                    <input className={css.input} type="password" name="password" placeholder="Password" required />
                 </label>
+                <button type="submit" className={css.button}>Sing up</button>
+
             </form>
-
-            <button type="submit" className={css.button}>Sing up</button>
-
         </div>
     );
 }

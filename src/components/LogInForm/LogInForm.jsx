@@ -18,6 +18,7 @@ const LogInForm = () => {
             password: password.value,
         }
         console.log(user);
+        
         dispatch(logIn(user));
         form.reset();
     }
@@ -34,8 +35,8 @@ const LogInForm = () => {
                 <label className={css.labele}>
                     <input className={css.input} type="password" name="password" placeholder="Password" />
                 </label>
+                <button type="submit" className={css.button} >Log in</button>
             </form>
-            <button type="submit" className={css.button} >Log in</button>
 
         </div>
     );
