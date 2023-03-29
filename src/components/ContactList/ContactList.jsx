@@ -18,9 +18,7 @@ const ContactList = () => {
             contact.name.toLowerCase().includes(isAddedFilter)
         );
     };
-
     const filtredList = getContactsList();
-
     return (
         <div className={css.list_box}>
             <ul className={css.list}>
